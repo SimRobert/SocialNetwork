@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab8_9_map.GUI.ProfileController">
+    <children>
+        <TabPane prefHeight="400.0" prefWidth="600.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab text="Profile">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <SplitPane dividerPositions="0.4445" layoutX="48.0" layoutY="6.0" prefHeight="400.0" prefWidth="571.2" style="-fx-background-color: B0F9C3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="314.0">
+                                            <children>
+                                                <VBox alignment="TOP_CENTER" layoutX="8.0" prefHeight="398.4" prefWidth="246.4" spacing="30.0" style="-fx-background-color: rgba(48,164,175,0.9);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@profile.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <GridPane>
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Label fx:id="labelFirstname1" text="Firstname" GridPane.halignment="CENTER">
+                                                                    <font>
+                                                                        <Font size="16.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label fx:id="labelLastname1" text="Lastname" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                                                    <font>
+                                                                        <Font size="16.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </GridPane>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets top="70.0" />
+                                                    </padding>
+                                                </VBox>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                            <children>
+                                                <VBox alignment="TOP_CENTER" layoutX="109.0" layoutY="38.0" prefHeight="398.4" prefWidth="317.6" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" text="Sugestii de prieteni">
+                                                            <font>
+                                                                <Font name="Calisto MT" size="19.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <ListView fx:id="listViewSuggestions" prefHeight="200.0" prefWidth="200.0" />
+                                                        <Button fx:id="sendInvitation" mnemonicParsing="false" onAction="#sendInvitation" style="-fx-background-color: #6db4b4; -fx-border-color: #6db4b4;" text="Trimite cerere prietenie" />
+                                                        <Button mnemonicParsing="false" onAction="#refresh" style="-fx-background-color: #6db4b4; -fx-border-color: #FFB2B2;" text="Refresh" />
+                                                    </children>
+                                                    <padding>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="30.0" />
+                                                    </padding>
+                                                </VBox>
+                                            </children></AnchorPane>
+                                    </items>
+                                </SplitPane>
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Friends">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <SplitPane dividerPositions="0.4480337078651684" layoutX="48.0" layoutY="6.0" prefHeight="400.0" prefWidth="571.2" style="-fx-background-color: #B0F9C3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                            <children>
+                                                <VBox alignment="TOP_CENTER" layoutX="89.0" layoutY="99.0" prefHeight="398.4" prefWidth="278.4" spacing="20.0" style="-fx-background-color: #6db4b4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <padding>
+                                                        <Insets top="70.0" />
+                                                    </padding>
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@profile.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <GridPane>
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Label fx:id="labelLastname2" text="Lastname" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                                                    <font>
+                                                                        <Font size="16.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label fx:id="labelFirstname2" text="Firstname" GridPane.halignment="CENTER">
+                                                                    <font>
+                                                                        <Font size="16.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </GridPane>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                            <children>
+                                                <VBox alignment="TOP_CENTER" layoutX="85.0" layoutY="36.0" prefHeight="398.4" prefWidth="285.6" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <padding>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="30.0" />
+                                                    </padding>
+                                                    <children>
+                                                        <Label text="Prietenii mei">
+                                                            <font>
+                                                                <Font name="Calisto MT" size="19.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <ListView fx:id="listViewFriends" onMouseClicked="#setLabelsFriends" prefHeight="317.0" prefWidth="286.0" />
+                                                    </children>
+                                                </VBox>
+                                            </children></AnchorPane>
+                                    </items>
+                                </SplitPane>
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Invitations">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: B0F9C3;">
+                            <children>
+                                <VBox alignment="TOP_CENTER" layoutX="214.0" layoutY="63.0" prefHeight="400.0" prefWidth="571.2" spacing="25.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <padding>
+                                        <Insets bottom="30.0" left="10.0" right="10.0" top="30.0" />
+                                    </padding>
+                                    <children>
+                                        <Label text="Cereri de prietenie">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <ListView fx:id="listViewInvitations" prefHeight="200.0" prefWidth="200.0">
+                                            <opaqueInsets>
+                                                <Insets bottom="10.0" right="10.0" />
+                                            </opaqueInsets>
+                                        </ListView>
+                                        <GridPane>
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <Button fx:id="btnAccept" mnemonicParsing="false" onAction="#acceptInvitation" style="-fx-background-color: #6db4b4; -fx-border-color: #FFB2B2;" text="Accept" GridPane.halignment="CENTER" />
+                                                <Button fx:id="btnDecline" mnemonicParsing="false" onAction="#declineInvitation" style="-fx-background-color: #6db4b4; -fx-border-color: #FFB2B2;" text="Decline" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                                            </children>
+                                        </GridPane>
+                                        <GridPane>
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <Button fx:id="btnRefresh" mnemonicParsing="false" onAction="#refresh" style="-fx-background-color: #dac5c5; -fx-border-color: #FFB2B2;" text="Refresh" GridPane.halignment="CENTER" />
+                                            </children>
+                                        </GridPane>
+                                        6DB4B4FF          </children>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                </VBox>
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Chat">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: B0F9C3;">
+                            <children>
+                                <VBox alignment="TOP_CENTER" layoutX="202.0" layoutY="14.0" prefHeight="400.0" prefWidth="571.2" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="25.0" />
+                                    </padding>
+                                    <children>
+                                        <Label alignment="CENTER" text="Chat">
+                                            <font>
+                                                <Font name="Calisto MT" size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <ChoiceBox fx:id="choiceBoxFriends" prefWidth="150.0" style="-fx-background-color: #e19f80; -fx-border-color: #ffdbc0;" />
+                                        <ListView fx:id="listViewChat" onMouseClicked="#setLabelReply" prefHeight="200.0" prefWidth="200.0" />
+                                        <Label fx:id="labelReply" />
+                                        <GridPane prefHeight="30.0" prefWidth="514.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <TextField fx:id="textFieldChat" GridPane.columnIndex="1" />
+                                                <Button fx:id="btnSend" mnemonicParsing="false" onAction="#sendMessage" style="-fx-border-color: #ffdbc0; -fx-background-color: #ec8b8b;" text="Send" GridPane.columnIndex="2" />
+                                                <Button fx:id="btnRefresh3" layoutX="378.0" layoutY="12.0" mnemonicParsing="false" onAction="#refreshChat" style="-fx-border-color: #e19f80; -fx-background-color: #dac5c5;" text="Refresh" GridPane.halignment="RIGHT" />
+                                            </children>
+                                        </GridPane>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
