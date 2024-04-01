@@ -1,2 +1,1 @@
-# SocialNetwork
-SocialNetwork project in Java Language
+The Social Network Application is an object-oriented project designed to emulate a typical social networking platform. It encompasses all CRUD (Create, Read, Update, Delete) operations, allowing users to manage their connections and communications effectively. Users can add and delete friends, send friend requests, and exchange messages within the platform.
